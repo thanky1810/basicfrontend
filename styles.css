@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   color: red;
 }
 
@@ -8,4 +8,65 @@ h1 {
 
 #world {
   color: blue;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+} */
+
+.box {
+  height: 50px;
+  width: 50px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(2) {
+    background-color: orange;
+  }
+}
+
+.box1 {
+  background-color: red;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background-color: blue;
+  }
+}
+
+.box2 {
+  margin-top: 15px;
+  background-color: blue;
+}
+
+.box3 {
+  height: 100px;
+  width: 100px;
+
+  padding: 30px;
+  border: 2px;
+  background-color: yellow;
+  box-sizing: border-box;
+}
+
+.input {
+  background-color: red;
+
+  &:focus {
+    background-color: blue;
+  }
+}
+
+.helo {
+  background-color: blue;
+  accent-color: green;
+  &:hover {
+    cursor: pointer;
+    color: green;
+  }
 }
