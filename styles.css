@@ -70,3 +70,8 @@
     color: green;
   }
 }
+
+h1 {
+  position: fixed;
+  top: 25 px;
+}
