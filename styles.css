@@ -65,6 +65,7 @@
 .helo {
   background-color: blue;
   accent-color: green;
+  height: 2000px;
   &:hover {
     cursor: pointer;
     color: green;
@@ -74,4 +75,29 @@
 h1 {
   position: fixed;
   top: 25 px;
+}
+
+.header {
+  height: 100px;
+  width: 200px;
+  background-color: green;
+  position: fixed;
+  top: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử xuống hàng khi không đủ chỗ */
+  width: 300px; /* Giới hạn chiều rộng để thấy rõ hiệu ứng */
+  border: 2px solid black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
 }
