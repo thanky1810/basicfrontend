@@ -16,8 +16,12 @@
   background-color: red;
 } */
 
+/* :root {
+  --percent: 100px;
+}
+
 .box {
-  height: 50px;
+  height: 0px;
   width: 50px;
   display: block;
   justify-content: center;
@@ -83,21 +87,52 @@ h1 {
   background-color: green;
   position: fixed;
   top: 0;
+} */
+
+:root {
+  --percent: 100px;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap; /* Cho phép các phần tử xuống hàng khi không đủ chỗ */
-  width: 300px; /* Giới hạn chiều rộng để thấy rõ hiệu ứng */
-  border: 2px solid black;
+  flex-wrap: wrap;
+  width: 1000px;
+  justify-content: space-around;
 }
 
 .box {
+  align-self: flex-end; /* Giữ phần tử sát đáy khi mở rộng */
   width: 100px;
-  height: 100px;
   background-color: lightblue;
   margin: 5px;
   text-align: center;
-  line-height: 100px;
   font-weight: bold;
+  height: var(--percent);
+  animation: growth ease-in 2s;
+}
+
+.box:nth-child(1) {
+  --percent: 150px;
+  background-color: red;
+}
+
+.box:nth-child(2) {
+  --percent: 200px;
+  background-color: green;
+}
+
+.box:nth-child(3) {
+  --percent: 30px;
+  background-color: yellow;
+}
+
+@keyframes growth {
+  from {
+    opacity: 0;
+    height: calc(var(--percent)-50%);
+  }
+  to {
+    opacity: 1;
+    height: var(--percent); /* Đạt đến kích thước mong muốn */
+  }
 }
