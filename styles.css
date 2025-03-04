@@ -98,17 +98,18 @@ h1 {
   flex-wrap: wrap;
   width: 1000px;
   justify-content: space-around;
+  align-items: flex-end;
+  height: 300px;
 }
 
 .box {
-  align-self: flex-end; /* Giữ phần tử sát đáy khi mở rộng */
   width: 100px;
   background-color: lightblue;
   margin: 5px;
   text-align: center;
   font-weight: bold;
-  height: var(--percent);
-  animation: growth ease-in 2s;
+  height: 0;
+  animation: growth ease-in 2s forwards;
 }
 
 .box:nth-child(1) {
@@ -128,11 +129,11 @@ h1 {
 
 @keyframes growth {
   from {
+    height: 0;
     opacity: 0;
-    height: calc(var(--percent)-50%);
   }
   to {
+    height: var(--percent);
     opacity: 1;
-    height: var(--percent); /* Đạt đến kích thước mong muốn */
   }
 }
