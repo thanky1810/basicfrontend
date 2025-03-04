@@ -89,7 +89,9 @@ h1 {
   top: 0;
 } */
 
-:root {
+/* ---------------------------------------------Animation------------------------ */
+
+/* :root {
   --percent: 100px;
 }
 
@@ -136,4 +138,56 @@ h1 {
     height: var(--percent);
     opacity: 1;
   }
+} */
+
+/* ---------------------------------------------BEM------------------------ */
+/* 
+.btn__container {
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn {
+  display: flex;
+
+} */
+
+.btn__container {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  height: 100vh; /* Chiều cao toàn màn hình */
+}
+
+.btn {
+  margin-left: 5px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn + .btn {
+  margin-left: 16px;
+}
+
+.btn--success {
+  background-color: #71be34;
+}
+.btn--warn {
+  background-color: #ffb702;
+}
+.btn--danger {
+  background-color: #ff623d;
 }
