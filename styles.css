@@ -141,7 +141,7 @@ h1 {
 } */
 
 /* ---------------------------------------------BEM------------------------ */
-/* 
+
 .btn__container {
   height: 100vh;
   align-items: center;
@@ -150,12 +150,11 @@ h1 {
 
 .btn {
   display: flex;
+}
 
-} */
-
-/* .btn__container {
+.btn__container {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   height: 100vh;
 }
@@ -190,7 +189,7 @@ h1 {
 }
 .btn--danger {
   background-color: #ff623d;
-} */
+}
 
 h3 {
   all: unset;
@@ -201,13 +200,10 @@ p {
   display: block;
 }
 
-body {
-  flex-direction: column;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
+#toast {
+  position: fixed;
+  top: 32px;
+  right: 32px;
 }
 
 .toast {
@@ -216,10 +212,31 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  min-width: 400px;
+  max-width: 450px;
   border-radius: 2px;
   padding: 20px 0;
   border-left: 4px solid;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  animation: slideInLeft ease 0.3s, fadeOut linear 1s 3s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
 
 .container + .container {
@@ -232,6 +249,7 @@ body {
 }
 
 .toast__body {
+  flex-grow: 1;
   padding-left: 10px;
 }
 .toast__title {
@@ -243,6 +261,7 @@ body {
   font-size: 14px;
   color: #888;
   margin-top: 4px;
+  line-height: 1.6;
 }
 .toast__close {
   padding-left: 10px;
