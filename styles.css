@@ -153,11 +153,11 @@ h1 {
 
 } */
 
-.btn__container {
+/* .btn__container {
   display: flex;
-  align-items: center; /* Căn giữa theo chiều ngang */
-  justify-content: center; /* Căn giữa theo chiều dọc */
-  height: 100vh; /* Chiều cao toàn màn hình */
+  align-items: center; 
+  justify-content: center;
+  height: 100vh;
 }
 
 .btn {
@@ -190,4 +190,94 @@ h1 {
 }
 .btn--danger {
   background-color: #ff623d;
+} */
+
+h3 {
+  all: unset;
+}
+
+p {
+  all: unset;
+  display: block;
+}
+
+body {
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.toast {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px 0;
+  border-left: 4px solid;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+}
+
+.container + .container {
+  margin-top: 24px;
+}
+
+.toast__icon {
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.toast__body {
+  padding-left: 10px;
+}
+.toast__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+.toast__msg {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+.toast__close {
+  padding-left: 10px;
+  padding: 0 16px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.toast--success {
+  border-color: green;
+
+  &:nth-child(1) {
+    color: green;
+  }
+}
+.toast--info {
+  border-color: blue;
+  &:nth-child(1) {
+    color: blue;
+  }
+}
+.toast--warning {
+  border-color: yellow;
+  &:nth-child(1) {
+    color: yellow;
+  }
+}
+.toast--error {
+  border-color: red;
+  &:nth-child(1) {
+    color: red;
+  }
 }
